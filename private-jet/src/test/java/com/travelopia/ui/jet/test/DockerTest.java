@@ -13,6 +13,6 @@ public class DockerTest {
     @Test
     public void test() throws InterruptedException {
         System.out.println("Sample docker test");
-        Thread.sleep(50000);
+       // Thread.sleep(50000);
     }
 }
