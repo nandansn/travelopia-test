@@ -24,9 +24,16 @@ dependencies {
 
 
 
+
+
+
 task runTests(type: Test) {
     useTestNG() {
         suites 'build/resources/test/suites/testng-suite.xml'
+        //set TestNG output dir
+        outputDirectory = file("$project.buildDir//testngOutput")
+        //required to turn on TestNG reports
+        useDefaultListeners = true
     }
     testLogging {
         exceptionFormat = 'full'
