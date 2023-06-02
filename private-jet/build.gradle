@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.nanda.travelopia.jet'
+version = '1.0-SNAPSHOT'
+
+compileTestJava {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+}
+
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.testng:testng:7.4.0'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.0.0' // For automatic WebDriver management
+}
+
+
+
+task runTests(type: Test) {
+    useTestNG() {
+        suites 'build/resources/test/suites/testng-suite.xml'
+    }
+    testLogging {
+        exceptionFormat = 'full'
+        events 'started', 'passed', 'skipped', 'failed'
+    }
+}
