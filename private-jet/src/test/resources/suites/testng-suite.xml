@@ -3,6 +3,7 @@
     <test name="SampleTest">
         <classes>
             <class name="com.travelopia.ui.jet.test.DockerTest" />
+            <class name="com.travelopia.ui.jet.test.JenkinsTest" />
         </classes>
     </test>
 </suite>

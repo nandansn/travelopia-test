@@ -1,5 +1,6 @@
 package com.travelopia.ui.jet.test;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -12,7 +13,7 @@ public class DockerTest {
 
     @Test
     public void test() throws InterruptedException {
-        System.out.println("Sample docker test");
+        Assert.assertTrue(true);
        // Thread.sleep(50000);
     }
 }
